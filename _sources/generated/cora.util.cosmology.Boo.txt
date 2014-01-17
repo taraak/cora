@@ -1,0 +1,25 @@
+cora.util.cosmology.Boo
+=======================
+
+.. currentmodule:: cora.util.cosmology
+
+.. autoclass:: Boo
+
+   
+
+   .. HACK -- the point here is that we don't want this to appear in the output, but the autosummary should still generate the pages.
+      .. autosummary::
+         :toctree:
+      
+         Boo.__format__
+         Boo.__new__
+         Boo.__reduce__
+         Boo.__reduce_ex__
+         Boo.__sizeof__
+         Boo.__subclasshook__
+         Boo.foo
+
+
+
+   
+

@@ -1,0 +1,6 @@
+cora.foreground.galaxy.ConstrainedGalaxy.like_map
+=================================================
+
+.. currentmodule:: cora.foreground.galaxy
+
+.. automethod:: ConstrainedGalaxy.like_map

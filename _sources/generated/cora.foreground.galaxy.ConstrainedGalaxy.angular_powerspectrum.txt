@@ -1,0 +1,6 @@
+cora.foreground.galaxy.ConstrainedGalaxy.angular_powerspectrum
+==============================================================
+
+.. currentmodule:: cora.foreground.galaxy
+
+.. automethod:: ConstrainedGalaxy.angular_powerspectrum

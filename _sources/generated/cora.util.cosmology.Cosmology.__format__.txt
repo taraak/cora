@@ -1,0 +1,6 @@
+cora.util.cosmology.Cosmology.__format__
+========================================
+
+.. currentmodule:: cora.util.cosmology
+
+.. automethod:: Cosmology.__format__

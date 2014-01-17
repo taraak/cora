@@ -1,0 +1,6 @@
+cora.foreground.galaxy.ConstrainedGalaxy.getpolsky
+==================================================
+
+.. currentmodule:: cora.foreground.galaxy
+
+.. automethod:: ConstrainedGalaxy.getpolsky

@@ -1,0 +1,6 @@
+cora.foreground.galaxy.ConstrainedGalaxy.spectral_map
+=====================================================
+
+.. currentmodule:: cora.foreground.galaxy
+
+.. autoattribute:: ConstrainedGalaxy.spectral_map

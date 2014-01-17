@@ -1,0 +1,61 @@
+cora.util.cosmology.Cosmology
+=============================
+
+.. currentmodule:: cora.util.cosmology
+
+.. autoclass:: Cosmology
+
+   
+
+   .. HACK -- the point here is that we don't want this to appear in the output, but the autosummary should still generate the pages.
+      .. autosummary::
+         :toctree:
+      
+         Cosmology.H
+         Cosmology.__format__
+         Cosmology.__new__
+         Cosmology.__reduce__
+         Cosmology.__reduce_ex__
+         Cosmology.__sizeof__
+         Cosmology.__subclasshook__
+         Cosmology.angular_distance
+         Cosmology.comoving_distance
+         Cosmology.init_physical
+         Cosmology.lookback_time
+         Cosmology.luminosity_distance
+         Cosmology.proper_distance
+
+
+
+   
+
+   .. HACK -- the point here is that we don't want this to appear in the output, but the autosummary should still generate the pages.
+      .. autosummary::
+         :toctree:
+      
+         Cosmology.H0
+         Cosmology.__delattr__
+         Cosmology.__dict__
+         Cosmology.__doc__
+         Cosmology.__getattribute__
+         Cosmology.__hash__
+         Cosmology.__init__
+         Cosmology.__module__
+         Cosmology.__repr__
+         Cosmology.__setattr__
+         Cosmology.__str__
+         Cosmology.__weakref__
+         Cosmology._unit_distance
+         Cosmology._unit_time
+         Cosmology.omega_b
+         Cosmology.omega_c
+         Cosmology.omega_g
+         Cosmology.omega_k
+         Cosmology.omega_l
+         Cosmology.omega_m
+         Cosmology.omega_n
+         Cosmology.omega_r
+         Cosmology.units
+         Cosmology.w_0
+         Cosmology.w_a
+

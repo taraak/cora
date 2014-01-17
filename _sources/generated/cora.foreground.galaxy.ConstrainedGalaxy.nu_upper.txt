@@ -1,0 +1,6 @@
+cora.foreground.galaxy.ConstrainedGalaxy.nu_upper
+=================================================
+
+.. currentmodule:: cora.foreground.galaxy
+
+.. autoattribute:: ConstrainedGalaxy.nu_upper

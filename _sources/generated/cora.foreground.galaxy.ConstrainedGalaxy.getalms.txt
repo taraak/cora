@@ -1,0 +1,6 @@
+cora.foreground.galaxy.ConstrainedGalaxy.getalms
+================================================
+
+.. currentmodule:: cora.foreground.galaxy
+
+.. automethod:: ConstrainedGalaxy.getalms

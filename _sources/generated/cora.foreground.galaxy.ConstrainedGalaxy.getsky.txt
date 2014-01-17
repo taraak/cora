@@ -1,0 +1,6 @@
+cora.foreground.galaxy.ConstrainedGalaxy.getsky
+===============================================
+
+.. currentmodule:: cora.foreground.galaxy
+
+.. automethod:: ConstrainedGalaxy.getsky

@@ -1,0 +1,6 @@
+cora.foreground.galaxy.ConstrainedGalaxy.nu_pixels
+==================================================
+
+.. currentmodule:: cora.foreground.galaxy
+
+.. autoattribute:: ConstrainedGalaxy.nu_pixels

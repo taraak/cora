@@ -1,0 +1,226 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Co-ordinate Utilities (coord) &mdash; cora 0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'./',
+        VERSION:'0.1',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="cora 0.1 documentation" href="index.html"/>
+        <link rel="next" title="cora.util.coord.sph_to_cart" href="generated/cora.util.coord.sph_to_cart.html"/>
+        <link rel="prev" title="cora.util.hputil.coord_c2g" href="generated/cora.util.hputil.coord_c2g.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="icon icon-home"> cora</a>
+        <form class="wy-form" action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search docs" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="simulation.html">Simulating the Radio Sky</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html#command-line-tools">Command Line Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html#map-format">Map Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html#module-cora.foreground.galaxy">Selected API</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="cosmology.html">Cosmology routines (<tt class="docutils literal"><span class="pre">cosmology</span></tt>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cosmology.html#classes">Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hputil.html">Healpix Utilities (<tt class="docutils literal"><span class="pre">hputil</span></tt>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hputil.html#forward-transform-routines">Forward Transform Routines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hputil.html#backward-transforms">Backward Transforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hputil.html#sky-transforms">Sky Transforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hputil.html#miscellaneous">Miscellaneous</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hputil.html#co-ordinate-transform">Co-ordinate Transform</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Co-ordinate Utilities (<tt class="docutils literal"><span class="pre">coord</span></tt>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#transforms">Transforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vector-operations">Vector operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tangent-plane">Tangent Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#miscellaneous">Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">cora</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="index.html">Docs</a> &raquo;</li>
+  <li><a href="">Co-ordinate Utilities (<tt class="docutils literal"><span class="pre">coord</span></tt>)</a></li>
+  
+</ul>
+<hr/>
+
+          
+  <span class="target" id="module-cora.util.coord"></span><div class="section" id="co-ordinate-utilities-coord">
+<h1>Co-ordinate Utilities (<a class="reference internal" href="#module-cora.util.coord" title="cora.util.coord"><tt class="xref py py-mod docutils literal"><span class="pre">coord</span></tt></a>)<a class="headerlink" href="#co-ordinate-utilities-coord" title="Permalink to this headline">¶</a></h1>
+<p>A module of useful functions when dealing with Spherical Polar
+co-ordinates.</p>
+<div class="section" id="transforms">
+<h2>Transforms<a class="headerlink" href="#transforms" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/cora.util.coord.sph_to_cart.html#cora.util.coord.sph_to_cart" title="cora.util.coord.sph_to_cart"><tt class="xref py py-obj docutils literal"><span class="pre">sph_to_cart</span></tt></a>(sph_arr)</td>
+<td>Convert a vector in Spherical Polar coordinates to Cartesians.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/cora.util.coord.cart_to_sph.html#cora.util.coord.cart_to_sph" title="cora.util.coord.cart_to_sph"><tt class="xref py py-obj docutils literal"><span class="pre">cart_to_sph</span></tt></a>(cart_arr)</td>
+<td>Convert a cartesian vector into Spherical Polars.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="vector-operations">
+<h2>Vector operations<a class="headerlink" href="#vector-operations" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/cora.util.coord.sph_dot.html#cora.util.coord.sph_dot" title="cora.util.coord.sph_dot"><tt class="xref py py-obj docutils literal"><span class="pre">sph_dot</span></tt></a>(arr1,&nbsp;arr2)</td>
+<td>Take the scalar product in spherical polars.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="tangent-plane">
+<h2>Tangent Plane<a class="headerlink" href="#tangent-plane" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/cora.util.coord.thetaphi_plane.html#cora.util.coord.thetaphi_plane" title="cora.util.coord.thetaphi_plane"><tt class="xref py py-obj docutils literal"><span class="pre">thetaphi_plane</span></tt></a>(sph_arr)</td>
+<td>For each position, return the theta, phi unit vectors (in spherical polars).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/cora.util.coord.thetaphi_plane_cart.html#cora.util.coord.thetaphi_plane_cart" title="cora.util.coord.thetaphi_plane_cart"><tt class="xref py py-obj docutils literal"><span class="pre">thetaphi_plane_cart</span></tt></a>(sph_arr)</td>
+<td>For each position, return the theta, phi unit vectors (in cartesians).</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="miscellaneous">
+<h2>Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/cora.util.coord.great_circle_points.html#cora.util.coord.great_circle_points" title="cora.util.coord.great_circle_points"><tt class="xref py py-obj docutils literal"><span class="pre">great_circle_points</span></tt></a>(sph1,&nbsp;sph2,&nbsp;npoints)</td>
+<td>Return the intermediate points on the great circle between points <cite>sph1</cite> and <cite>sph2</cite>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="generated/cora.util.coord.sph_to_cart.html" class="btn btn-neutral float-right" title="cora.util.coord.sph_to_cart"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="generated/cora.util.hputil.coord_c2g.html" class="btn btn-neutral" title="cora.util.hputil.coord_c2g"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2013, J. Richard Shaw.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+cora.util.cosmology.Cosmology.units
+===================================
+
+.. currentmodule:: cora.util.cosmology
+
+.. autoattribute:: Cosmology.units

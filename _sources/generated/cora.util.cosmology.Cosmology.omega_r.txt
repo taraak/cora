@@ -1,0 +1,6 @@
+cora.util.cosmology.Cosmology.omega_r
+=====================================
+
+.. currentmodule:: cora.util.cosmology
+
+.. autoattribute:: Cosmology.omega_r

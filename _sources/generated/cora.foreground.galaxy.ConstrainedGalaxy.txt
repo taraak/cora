@@ -1,0 +1,64 @@
+cora.foreground.galaxy.ConstrainedGalaxy
+========================================
+
+.. currentmodule:: cora.foreground.galaxy
+
+.. autoclass:: ConstrainedGalaxy
+
+   
+
+   .. HACK -- the point here is that we don't want this to appear in the output, but the autosummary should still generate the pages.
+      .. autosummary::
+         :toctree:
+      
+         ConstrainedGalaxy.__format__
+         ConstrainedGalaxy.__init__
+         ConstrainedGalaxy.__new__
+         ConstrainedGalaxy.__reduce__
+         ConstrainedGalaxy.__reduce_ex__
+         ConstrainedGalaxy.__sizeof__
+         ConstrainedGalaxy.__subclasshook__
+         ConstrainedGalaxy._load_data
+         ConstrainedGalaxy._num_array
+         ConstrainedGalaxy._width_array
+         ConstrainedGalaxy.angular_powerspectrum
+         ConstrainedGalaxy.getalms
+         ConstrainedGalaxy.getfield
+         ConstrainedGalaxy.getpolsky
+         ConstrainedGalaxy.getsky
+         ConstrainedGalaxy.like_kiyo_map
+         ConstrainedGalaxy.like_map
+         ConstrainedGalaxy.mean_nu
+
+
+
+   
+
+   .. HACK -- the point here is that we don't want this to appear in the output, but the autosummary should still generate the pages.
+      .. autosummary::
+         :toctree:
+      
+         ConstrainedGalaxy.__delattr__
+         ConstrainedGalaxy.__dict__
+         ConstrainedGalaxy.__doc__
+         ConstrainedGalaxy.__getattribute__
+         ConstrainedGalaxy.__hash__
+         ConstrainedGalaxy.__module__
+         ConstrainedGalaxy.__repr__
+         ConstrainedGalaxy.__setattr__
+         ConstrainedGalaxy.__str__
+         ConstrainedGalaxy.__weakref__
+         ConstrainedGalaxy._nside
+         ConstrainedGalaxy.nside
+         ConstrainedGalaxy.nu_lower
+         ConstrainedGalaxy.nu_num
+         ConstrainedGalaxy.nu_pixels
+         ConstrainedGalaxy.nu_upper
+         ConstrainedGalaxy.spectral_map
+         ConstrainedGalaxy.x_num
+         ConstrainedGalaxy.x_pixels
+         ConstrainedGalaxy.x_width
+         ConstrainedGalaxy.y_num
+         ConstrainedGalaxy.y_pixels
+         ConstrainedGalaxy.y_width
+

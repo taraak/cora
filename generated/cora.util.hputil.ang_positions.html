@@ -1,0 +1,188 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>cora.util.hputil.ang_positions &mdash; cora 0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'../',
+        VERSION:'0.1',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="cora 0.1 documentation" href="../index.html"/>
+        <link rel="up" title="Healpix Utilities (hputil)" href="../hputil.html"/>
+        <link rel="next" title="cora.util.hputil.nside_for_lmax" href="cora.util.hputil.nside_for_lmax.html"/>
+        <link rel="prev" title="cora.util.hputil.sphtrans_inv_sky" href="cora.util.hputil.sphtrans_inv_sky.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> cora</a>
+        <form class="wy-form" action="../search.html" method="get">
+  <input type="text" name="q" placeholder="Search docs" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../simulation.html">Simulating the Radio Sky</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../simulation.html#command-line-tools">Command Line Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulation.html#map-format">Map Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulation.html#module-cora.foreground.galaxy">Selected API</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../cosmology.html">Cosmology routines (<tt class="docutils literal"><span class="pre">cosmology</span></tt>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cosmology.html#classes">Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../hputil.html">Healpix Utilities (<tt class="docutils literal"><span class="pre">hputil</span></tt>)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../hputil.html#forward-transform-routines">Forward Transform Routines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hputil.html#backward-transforms">Backward Transforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hputil.html#sky-transforms">Sky Transforms</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../hputil.html#miscellaneous">Miscellaneous</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hputil.html#co-ordinate-transform">Co-ordinate Transform</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../coord.html">Co-ordinate Utilities (<tt class="docutils literal"><span class="pre">coord</span></tt>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../coord.html#transforms">Transforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../coord.html#vector-operations">Vector operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../coord.html#tangent-plane">Tangent Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../coord.html#miscellaneous">Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">cora</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="../index.html">Docs</a> &raquo;</li>
+  <li><a href="">cora.util.hputil.ang_positions</a></li>
+  
+</ul>
+<hr/>
+
+          
+  <div class="section" id="cora-util-hputil-ang-positions">
+<h1>cora.util.hputil.ang_positions<a class="headerlink" href="#cora-util-hputil-ang-positions" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="cora.util.hputil.ang_positions">
+<tt class="descclassname">cora.util.hputil.</tt><tt class="descname">ang_positions</tt><big>(</big><em>nside</em><big>)</big><a class="headerlink" href="#cora.util.hputil.ang_positions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch the angular position of each pixel in a map.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>nside</strong> : scalar</p>
+<blockquote>
+<div><p>The size of the map (nside is a definition specific to Healpix).</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>angpos</strong> : np.ndarray</p>
+<blockquote class="last">
+<div><p>The angular position (in spherical polars), of each pixel in a
+Healpix map. Packed at <cite>[ [theta1, phi1], [theta2, phi2], ...]</cite></p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="cora.util.hputil.nside_for_lmax.html" class="btn btn-neutral float-right" title="cora.util.hputil.nside_for_lmax"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="cora.util.hputil.sphtrans_inv_sky.html" class="btn btn-neutral" title="cora.util.hputil.sphtrans_inv_sky"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2013, J. Richard Shaw.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+cora.foreground.galaxy.ConstrainedGalaxy.__hash__
+=================================================
+
+.. currentmodule:: cora.foreground.galaxy
+
+.. autoattribute:: ConstrainedGalaxy.__hash__

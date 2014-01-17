@@ -1,0 +1,6 @@
+cora.util.hputil.sphtrans_inv_complex
+=====================================
+
+.. currentmodule:: cora.util.hputil
+
+.. autofunction:: sphtrans_inv_complex

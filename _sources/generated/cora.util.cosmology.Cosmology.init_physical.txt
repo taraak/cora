@@ -1,0 +1,6 @@
+cora.util.cosmology.Cosmology.init_physical
+===========================================
+
+.. currentmodule:: cora.util.cosmology
+
+.. automethod:: Cosmology.init_physical

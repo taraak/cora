@@ -1,0 +1,6 @@
+cora.util.cosmology.Cosmology.__sizeof__
+========================================
+
+.. currentmodule:: cora.util.cosmology
+
+.. automethod:: Cosmology.__sizeof__

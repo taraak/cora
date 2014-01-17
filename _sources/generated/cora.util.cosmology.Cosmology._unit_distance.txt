@@ -1,0 +1,6 @@
+cora.util.cosmology.Cosmology._unit_distance
+============================================
+
+.. currentmodule:: cora.util.cosmology
+
+.. autoattribute:: Cosmology._unit_distance

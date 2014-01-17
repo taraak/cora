@@ -1,0 +1,6 @@
+cora.util.cosmology.Cosmology._unit_time
+========================================
+
+.. currentmodule:: cora.util.cosmology
+
+.. autoattribute:: Cosmology._unit_time

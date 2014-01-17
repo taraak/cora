@@ -1,0 +1,6 @@
+cora.foreground.galaxy.ConstrainedGalaxy._load_data
+===================================================
+
+.. currentmodule:: cora.foreground.galaxy
+
+.. automethod:: ConstrainedGalaxy._load_data

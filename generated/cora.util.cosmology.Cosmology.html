@@ -1,0 +1,214 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>cora.util.cosmology.Cosmology &mdash; cora 0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'../',
+        VERSION:'0.1',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="cora 0.1 documentation" href="../index.html"/>
+        <link rel="up" title="Cosmology routines (cosmology)" href="../cosmology.html"/>
+        <link rel="next" title="Healpix Utilities (hputil)" href="../hputil.html"/>
+        <link rel="prev" title="cora.util.cosmology.Cosmology" href=""/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> cora</a>
+        <form class="wy-form" action="../search.html" method="get">
+  <input type="text" name="q" placeholder="Search docs" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../simulation.html">Simulating the Radio Sky</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../simulation.html#command-line-tools">Command Line Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulation.html#map-format">Map Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulation.html#module-cora.foreground.galaxy">Selected API</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../cosmology.html">Cosmology routines (<tt class="docutils literal"><span class="pre">cosmology</span></tt>)</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../cosmology.html#classes">Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../hputil.html">Healpix Utilities (<tt class="docutils literal"><span class="pre">hputil</span></tt>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hputil.html#forward-transform-routines">Forward Transform Routines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hputil.html#backward-transforms">Backward Transforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hputil.html#sky-transforms">Sky Transforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hputil.html#miscellaneous">Miscellaneous</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hputil.html#co-ordinate-transform">Co-ordinate Transform</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../coord.html">Co-ordinate Utilities (<tt class="docutils literal"><span class="pre">coord</span></tt>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../coord.html#transforms">Transforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../coord.html#vector-operations">Vector operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../coord.html#tangent-plane">Tangent Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../coord.html#miscellaneous">Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">cora</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="../index.html">Docs</a> &raquo;</li>
+  <li><a href="">cora.util.cosmology.Cosmology</a></li>
+  
+</ul>
+<hr/>
+
+          
+  <div class="section" id="cora-util-cosmology-cosmology">
+<h1>cora.util.cosmology.Cosmology<a class="headerlink" href="#cora-util-cosmology-cosmology" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="cora.util.cosmology.Cosmology">
+<em class="property">class </em><tt class="descclassname">cora.util.cosmology.</tt><tt class="descname">Cosmology</tt><a class="headerlink" href="#cora.util.cosmology.Cosmology" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class to store a cosmology, and compute measures.</p>
+<p>Defines a cosmology and allows calculation of a few simple
+quantities (notably distance measures and lookback time).</p>
+<p>Default params from Planck+WP+highL+BAO (<a class="reference external" href="http://arxiv.org/pdf/1303.5076v1.pdf">http://arxiv.org/pdf/1303.5076v1.pdf</a>).</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="96%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>units</td>
+<td>({&#8216;astro&#8217;, &#8216;cosmo&#8217;, &#8216;si&#8217;}) The unit system to return quantities in. SI is self explanatory, <cite>astro</cite> has distances in Mpc and time in Myr, and <cite>cosmo</cite> has distances in Mpc/h and time in Myr. Defaults to &#8216;cosmo&#8217;.</td>
+</tr>
+<tr class="row-even"><td>omega_b</td>
+<td>(scalar) Baryon fraction relative to the critical density.</td>
+</tr>
+<tr class="row-odd"><td>omega_c</td>
+<td>(scalar) Dark matter fraction relative to the critical density.</td>
+</tr>
+<tr class="row-even"><td>omega_l</td>
+<td>(scalar) Dark energy fraction relative to the critical density (assumes a cosmological constant).</td>
+</tr>
+<tr class="row-odd"><td>omega_g</td>
+<td>(scalar) Fraction of electromagnetic radiation relative to the critical density.</td>
+</tr>
+<tr class="row-even"><td>omega_g</td>
+<td>(scalar) Fraction of massless neutrinos relative to the critical density.</td>
+</tr>
+<tr class="row-odd"><td>H0</td>
+<td>(scalar) The Hubble constant in km/s / Mpc</td>
+</tr>
+<tr class="row-even"><td>w_0, w_a</td>
+<td>(scalars) Dark energy parameters.</td>
+</tr>
+<tr class="row-odd"><td>omega_k</td>
+<td>(scalar, readonly) The curvature as a fraction of the critical density.</td>
+</tr>
+<tr class="row-even"><td>omega_m</td>
+<td>(scalar, readonly) The total matter density as a fraction of the critical density.</td>
+</tr>
+<tr class="row-odd"><td>omega_r</td>
+<td>(scalar, readonly) The total radiation density as a fraction of the critical density.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="../hputil.html" class="btn btn-neutral float-right" title="Healpix Utilities (hputil)"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="" class="btn btn-neutral" title="cora.util.cosmology.Cosmology"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2013, J. Richard Shaw.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>

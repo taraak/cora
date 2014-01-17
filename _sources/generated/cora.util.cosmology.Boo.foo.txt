@@ -1,0 +1,6 @@
+cora.util.cosmology.Boo.foo
+===========================
+
+.. currentmodule:: cora.util.cosmology
+
+.. automethod:: Boo.foo

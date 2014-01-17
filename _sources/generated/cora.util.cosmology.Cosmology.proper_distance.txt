@@ -1,0 +1,6 @@
+cora.util.cosmology.Cosmology.proper_distance
+=============================================
+
+.. currentmodule:: cora.util.cosmology
+
+.. automethod:: Cosmology.proper_distance

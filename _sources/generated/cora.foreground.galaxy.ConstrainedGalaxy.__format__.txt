@@ -1,0 +1,6 @@
+cora.foreground.galaxy.ConstrainedGalaxy.__format__
+===================================================
+
+.. currentmodule:: cora.foreground.galaxy
+
+.. automethod:: ConstrainedGalaxy.__format__

@@ -1,0 +1,6 @@
+cora.foreground.galaxy.ConstrainedGalaxy._width_array
+=====================================================
+
+.. currentmodule:: cora.foreground.galaxy
+
+.. automethod:: ConstrainedGalaxy._width_array

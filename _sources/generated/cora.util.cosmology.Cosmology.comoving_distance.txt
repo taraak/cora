@@ -1,0 +1,6 @@
+cora.util.cosmology.Cosmology.comoving_distance
+===============================================
+
+.. currentmodule:: cora.util.cosmology
+
+.. automethod:: Cosmology.comoving_distance

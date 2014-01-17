@@ -1,0 +1,6 @@
+cora.util.cosmology.Cosmology.lookback_time
+===========================================
+
+.. currentmodule:: cora.util.cosmology
+
+.. automethod:: Cosmology.lookback_time

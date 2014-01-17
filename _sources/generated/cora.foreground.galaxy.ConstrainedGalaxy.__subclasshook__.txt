@@ -1,0 +1,6 @@
+cora.foreground.galaxy.ConstrainedGalaxy.__subclasshook__
+=========================================================
+
+.. currentmodule:: cora.foreground.galaxy
+
+.. automethod:: ConstrainedGalaxy.__subclasshook__

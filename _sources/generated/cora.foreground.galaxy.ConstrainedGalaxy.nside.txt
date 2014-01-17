@@ -1,0 +1,6 @@
+cora.foreground.galaxy.ConstrainedGalaxy.nside
+==============================================
+
+.. currentmodule:: cora.foreground.galaxy
+
+.. autoattribute:: ConstrainedGalaxy.nside

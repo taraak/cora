@@ -1,0 +1,6 @@
+cora.util.cosmology.Cosmology.w_0
+=================================
+
+.. currentmodule:: cora.util.cosmology
+
+.. autoattribute:: Cosmology.w_0

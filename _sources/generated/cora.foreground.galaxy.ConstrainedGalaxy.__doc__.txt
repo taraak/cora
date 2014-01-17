@@ -1,0 +1,6 @@
+cora.foreground.galaxy.ConstrainedGalaxy.__doc__
+================================================
+
+.. currentmodule:: cora.foreground.galaxy
+
+.. autoattribute:: ConstrainedGalaxy.__doc__

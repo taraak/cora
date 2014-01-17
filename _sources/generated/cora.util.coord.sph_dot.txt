@@ -1,0 +1,6 @@
+cora.util.coord.sph_dot
+=======================
+
+.. currentmodule:: cora.util.coord
+
+.. autofunction:: sph_dot

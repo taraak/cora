@@ -1,0 +1,6 @@
+cora.foreground.galaxy.ConstrainedGalaxy.getfield
+=================================================
+
+.. currentmodule:: cora.foreground.galaxy
+
+.. automethod:: ConstrainedGalaxy.getfield

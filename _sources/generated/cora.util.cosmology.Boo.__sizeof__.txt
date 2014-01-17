@@ -1,0 +1,6 @@
+cora.util.cosmology.Boo.__sizeof__
+==================================
+
+.. currentmodule:: cora.util.cosmology
+
+.. automethod:: Boo.__sizeof__

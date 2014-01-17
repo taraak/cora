@@ -1,0 +1,6 @@
+cora.util.cosmology.Cosmology.__subclasshook__
+==============================================
+
+.. currentmodule:: cora.util.cosmology
+
+.. automethod:: Cosmology.__subclasshook__

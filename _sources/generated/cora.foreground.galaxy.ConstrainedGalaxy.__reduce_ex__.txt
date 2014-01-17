@@ -1,0 +1,6 @@
+cora.foreground.galaxy.ConstrainedGalaxy.__reduce_ex__
+======================================================
+
+.. currentmodule:: cora.foreground.galaxy
+
+.. automethod:: ConstrainedGalaxy.__reduce_ex__

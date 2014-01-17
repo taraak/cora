@@ -1,0 +1,6 @@
+cora.foreground.galaxy.ConstrainedGalaxy.y_width
+================================================
+
+.. currentmodule:: cora.foreground.galaxy
+
+.. autoattribute:: ConstrainedGalaxy.y_width

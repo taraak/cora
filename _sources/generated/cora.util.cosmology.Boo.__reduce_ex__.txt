@@ -1,0 +1,6 @@
+cora.util.cosmology.Boo.__reduce_ex__
+=====================================
+
+.. currentmodule:: cora.util.cosmology
+
+.. automethod:: Boo.__reduce_ex__

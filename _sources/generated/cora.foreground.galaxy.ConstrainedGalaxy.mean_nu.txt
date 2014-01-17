@@ -1,0 +1,6 @@
+cora.foreground.galaxy.ConstrainedGalaxy.mean_nu
+================================================
+
+.. currentmodule:: cora.foreground.galaxy
+
+.. automethod:: ConstrainedGalaxy.mean_nu

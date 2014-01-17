@@ -1,0 +1,6 @@
+cora.util.cosmology.Cosmology.__dict__
+======================================
+
+.. currentmodule:: cora.util.cosmology
+
+.. autoattribute:: Cosmology.__dict__

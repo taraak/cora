@@ -1,0 +1,6 @@
+cora.foreground.galaxy.ConstrainedGalaxy._num_array
+===================================================
+
+.. currentmodule:: cora.foreground.galaxy
+
+.. automethod:: ConstrainedGalaxy._num_array

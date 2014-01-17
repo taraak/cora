@@ -1,0 +1,6 @@
+cora.util.cosmology.Cosmology.luminosity_distance
+=================================================
+
+.. currentmodule:: cora.util.cosmology
+
+.. automethod:: Cosmology.luminosity_distance

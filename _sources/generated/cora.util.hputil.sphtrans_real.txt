@@ -1,0 +1,6 @@
+cora.util.hputil.sphtrans_real
+==============================
+
+.. currentmodule:: cora.util.hputil
+
+.. autofunction:: sphtrans_real

@@ -1,0 +1,268 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Healpix Utilities (hputil) &mdash; cora 0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'./',
+        VERSION:'0.1',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="cora 0.1 documentation" href="index.html"/>
+        <link rel="next" title="cora.util.hputil.sphtrans_real" href="generated/cora.util.hputil.sphtrans_real.html"/>
+        <link rel="prev" title="cora.util.cosmology.Cosmology" href="generated/cora.util.cosmology.Cosmology.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="icon icon-home"> cora</a>
+        <form class="wy-form" action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search docs" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="simulation.html">Simulating the Radio Sky</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html#command-line-tools">Command Line Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html#map-format">Map Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html#module-cora.foreground.galaxy">Selected API</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="cosmology.html">Cosmology routines (<tt class="docutils literal"><span class="pre">cosmology</span></tt>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cosmology.html#classes">Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Healpix Utilities (<tt class="docutils literal"><span class="pre">hputil</span></tt>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#forward-transform-routines">Forward Transform Routines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#backward-transforms">Backward Transforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sky-transforms">Sky Transforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#miscellaneous">Miscellaneous</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#co-ordinate-transform">Co-ordinate Transform</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="coord.html">Co-ordinate Utilities (<tt class="docutils literal"><span class="pre">coord</span></tt>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="coord.html#transforms">Transforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coord.html#vector-operations">Vector operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coord.html#tangent-plane">Tangent Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coord.html#miscellaneous">Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">cora</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="index.html">Docs</a> &raquo;</li>
+  <li><a href="">Healpix Utilities (<tt class="docutils literal"><span class="pre">hputil</span></tt>)</a></li>
+  
+</ul>
+<hr/>
+
+          
+  <span class="target" id="module-cora.util.hputil"></span><div class="section" id="healpix-utilities-hputil">
+<h1>Healpix Utilities (<a class="reference internal" href="#module-cora.util.hputil" title="cora.util.hputil"><tt class="xref py py-mod docutils literal"><span class="pre">hputil</span></tt></a>)<a class="headerlink" href="#healpix-utilities-hputil" title="Permalink to this headline">¶</a></h1>
+<p>Convenience functions for dealing with Healpix maps.</p>
+<p>Makes heavy use of the <a class="reference external" href="http://github.com/healpy">healpy</a> module.</p>
+<div class="section" id="forward-transform-routines">
+<h2>Forward Transform Routines<a class="headerlink" href="#forward-transform-routines" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/cora.util.hputil.sphtrans_real.html#cora.util.hputil.sphtrans_real" title="cora.util.hputil.sphtrans_real"><tt class="xref py py-obj docutils literal"><span class="pre">sphtrans_real</span></tt></a>(hpmap[,&nbsp;lmax,&nbsp;lside])</td>
+<td>Spherical Harmonic transform of a real map.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/cora.util.hputil.sphtrans_complex.html#cora.util.hputil.sphtrans_complex" title="cora.util.hputil.sphtrans_complex"><tt class="xref py py-obj docutils literal"><span class="pre">sphtrans_complex</span></tt></a>(hpmap[,&nbsp;lmax,&nbsp;centered,&nbsp;lside])</td>
+<td>Spherical harmonic transform of a complex function.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/cora.util.hputil.sphtrans_real_pol.html#cora.util.hputil.sphtrans_real_pol" title="cora.util.hputil.sphtrans_real_pol"><tt class="xref py py-obj docutils literal"><span class="pre">sphtrans_real_pol</span></tt></a>(hpmaps[,&nbsp;lmax,&nbsp;lside])</td>
+<td>Spherical Harmonic transform of polarisation functions on the sky.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/cora.util.hputil.sphtrans_complex_pol.html#cora.util.hputil.sphtrans_complex_pol" title="cora.util.hputil.sphtrans_complex_pol"><tt class="xref py py-obj docutils literal"><span class="pre">sphtrans_complex_pol</span></tt></a>(hpmaps[,&nbsp;lmax,&nbsp;...])</td>
+<td>Spherical harmonic transform of the polarisation on the sky (can be complex).</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="backward-transforms">
+<h2>Backward Transforms<a class="headerlink" href="#backward-transforms" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/cora.util.hputil.sphtrans_inv_real.html#cora.util.hputil.sphtrans_inv_real" title="cora.util.hputil.sphtrans_inv_real"><tt class="xref py py-obj docutils literal"><span class="pre">sphtrans_inv_real</span></tt></a>(alm,&nbsp;nside)</td>
+<td>Inverse spherical harmonic transform onto a real field.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/cora.util.hputil.sphtrans_inv_complex.html#cora.util.hputil.sphtrans_inv_complex" title="cora.util.hputil.sphtrans_inv_complex"><tt class="xref py py-obj docutils literal"><span class="pre">sphtrans_inv_complex</span></tt></a>(alm,&nbsp;nside)</td>
+<td>Inverse spherical harmonic transform onto a complex field.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/cora.util.hputil.sphtrans_inv_real_pol.html#cora.util.hputil.sphtrans_inv_real_pol" title="cora.util.hputil.sphtrans_inv_real_pol"><tt class="xref py py-obj docutils literal"><span class="pre">sphtrans_inv_real_pol</span></tt></a>(alm,&nbsp;nside)</td>
+<td>Inverse spherical harmonic transform onto a real polarised field.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="sky-transforms">
+<h2>Sky Transforms<a class="headerlink" href="#sky-transforms" title="Permalink to this headline">¶</a></h2>
+<p>Transform sets of polarised maps at multiple frequencies.</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/cora.util.hputil.sphtrans_sky.html#cora.util.hputil.sphtrans_sky" title="cora.util.hputil.sphtrans_sky"><tt class="xref py py-obj docutils literal"><span class="pre">sphtrans_sky</span></tt></a>(skymap[,&nbsp;lmax])</td>
+<td>Transform a 3d skymap, slice by slice.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/cora.util.hputil.sphtrans_inv_sky.html#cora.util.hputil.sphtrans_inv_sky" title="cora.util.hputil.sphtrans_inv_sky"><tt class="xref py py-obj docutils literal"><span class="pre">sphtrans_inv_sky</span></tt></a>(alm,&nbsp;nside)</td>
+<td>Invert a set of alms back into a 3d sky.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="miscellaneous">
+<h2>Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/cora.util.hputil.ang_positions.html#cora.util.hputil.ang_positions" title="cora.util.hputil.ang_positions"><tt class="xref py py-obj docutils literal"><span class="pre">ang_positions</span></tt></a>(nside)</td>
+<td>Fetch the angular position of each pixel in a map.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/cora.util.hputil.nside_for_lmax.html#cora.util.hputil.nside_for_lmax" title="cora.util.hputil.nside_for_lmax"><tt class="xref py py-obj docutils literal"><span class="pre">nside_for_lmax</span></tt></a>(lmax[,&nbsp;accuracy_boost])</td>
+<td>Return an nside appropriate for a spherical harmonic decomposition.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/cora.util.hputil.pack_alm.html#cora.util.hputil.pack_alm" title="cora.util.hputil.pack_alm"><tt class="xref py py-obj docutils literal"><span class="pre">pack_alm</span></tt></a>(almarray[,&nbsp;lmax])</td>
+<td>Pack <span class="math">\(a_{lm}\)</span> into Healpix format from 2D [l,m] array.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/cora.util.hputil.unpack_alm.html#cora.util.hputil.unpack_alm" title="cora.util.hputil.unpack_alm"><tt class="xref py py-obj docutils literal"><span class="pre">unpack_alm</span></tt></a>(alm,&nbsp;lmax[,&nbsp;fullm])</td>
+<td>Unpack <span class="math">\(a_{lm}\)</span> from Healpix format into 2D [l,m] array.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="co-ordinate-transform">
+<h2>Co-ordinate Transform<a class="headerlink" href="#co-ordinate-transform" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/cora.util.hputil.coord_x2y.html#cora.util.hputil.coord_x2y" title="cora.util.hputil.coord_x2y"><tt class="xref py py-obj docutils literal"><span class="pre">coord_x2y</span></tt></a>(map,&nbsp;x,&nbsp;y)</td>
+<td>Rotate a map from galactic co-ordinates into celestial co-ordinates.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/cora.util.hputil.coord_g2c.html#cora.util.hputil.coord_g2c" title="cora.util.hputil.coord_g2c"><tt class="xref py py-obj docutils literal"><span class="pre">coord_g2c</span></tt></a>(<a href="#id1"><span class="problematic" id="id2">map_</span></a>)</td>
+<td>Rotate a map from galactic co-ordinates into celestial co-ordinates.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/cora.util.hputil.coord_c2g.html#cora.util.hputil.coord_c2g" title="cora.util.hputil.coord_c2g"><tt class="xref py py-obj docutils literal"><span class="pre">coord_c2g</span></tt></a>(<a href="#id3"><span class="problematic" id="id4">map_</span></a>)</td>
+<td>Rotate a map from celestial co-ordinates into galactic co-ordinates.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="generated/cora.util.hputil.sphtrans_real.html" class="btn btn-neutral float-right" title="cora.util.hputil.sphtrans_real"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="generated/cora.util.cosmology.Cosmology.html" class="btn btn-neutral" title="cora.util.cosmology.Cosmology"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2013, J. Richard Shaw.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>

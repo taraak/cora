@@ -1,0 +1,6 @@
+cora.util.coord.great_circle_points
+===================================
+
+.. currentmodule:: cora.util.coord
+
+.. autofunction:: great_circle_points

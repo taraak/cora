@@ -1,0 +1,6 @@
+cora.util.cosmology.Cosmology.angular_distance
+==============================================
+
+.. currentmodule:: cora.util.cosmology
+
+.. automethod:: Cosmology.angular_distance

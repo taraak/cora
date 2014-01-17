@@ -1,0 +1,6 @@
+cora.util.hputil.nside_for_lmax
+===============================
+
+.. currentmodule:: cora.util.hputil
+
+.. autofunction:: nside_for_lmax

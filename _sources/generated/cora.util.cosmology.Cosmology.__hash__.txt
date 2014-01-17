@@ -1,0 +1,6 @@
+cora.util.cosmology.Cosmology.__hash__
+======================================
+
+.. currentmodule:: cora.util.cosmology
+
+.. autoattribute:: Cosmology.__hash__

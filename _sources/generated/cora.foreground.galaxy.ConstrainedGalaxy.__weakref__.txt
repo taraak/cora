@@ -1,0 +1,6 @@
+cora.foreground.galaxy.ConstrainedGalaxy.__weakref__
+====================================================
+
+.. currentmodule:: cora.foreground.galaxy
+
+.. autoattribute:: ConstrainedGalaxy.__weakref__
