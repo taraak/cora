@@ -13,7 +13,7 @@ import cora
 
 if ((re.search('gcc', sysconfig.get_config_var('CC')) is None) or
     ('CORA_NO_OPENMP' in os.environ)):
-    print "Not using OpenMP"
+    print("Not using OpenMP")
     args = []
 else:
     args = ['-fopenmp']
